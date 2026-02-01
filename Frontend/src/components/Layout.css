@@ -1,0 +1,231 @@
+/* Layout Parent */
+.app-layout-top {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  width: 100vw;
+  height: 100vh;
+  background: #f8fafc;
+}
+
+/* Navbar Styling */
+.top-navbar {
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link-item:hover { color: #ef4444; background: #fff1f2; }
+.nav-link-item.active { color: #ef4444; background: #fff1f2; font-weight: 700; }
+
+.upgrade-btn-top {
+  background: linear-gradient(135deg, #ef4444 0%, #f43f5e 100%);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.2);
+}
+
+/* Main Area Styling */
+.main-wrapper-top {
+  flex: 1;
+  overflow-y: auto; /* The scroll moves here */
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content-top {
+  flex: 1;
+  width: 100%;
+}
+
+/* Logo styling */
+.logo-box { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 22px; color: #ef4444; }
+
+/* Footer fix for top layout */
+.main-footer {
+  background: #ffffff;
+  padding: 30px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 14px;
+}
+:root {
+  --primary-red: #c62828;
+  --anyfeast-red: #ef4444;
+  --text-light: #ffffff;
+  --text-muted: #f3f3f3;
+  --mesh-bg: #f8fafc;
+}
+
+/* Remove scroll from the base levels - the wrapper will handle it */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ============================================================
+   AESTHETIC LAYOUT WRAPPER (Top-Nav Style)
+   ============================================================ */
+.app-layout-top {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  
+  /* Aesthetic high-end mesh gradient */
+  background-color: var(--mesh-bg);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(355, 78%, 90%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(217, 91%, 90%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(355, 78%, 95%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(217, 91%, 95%, 1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.top-navbar {
+  height: 80px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px); /* Frosted glass effect */
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-wrapper-top {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   LANDING PAGE STYLES (Integrated)
+   ============================================================ */
+.landing-bg {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(198, 40, 40, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-inner {
+  width: 100%;
+  max-width: 1400px; /* Slightly wider frame for aesthetics */
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  text-align: center;
+  min-width: 520px;
+  color: var(--text-light);
+}
+
+.content h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.tagline {
+  font-size: 19px;
+  margin-bottom: 36px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.feature-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 18px 26px;
+  border-radius: 12px;
+  border-left: 4px solid white;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ef4444;
+}

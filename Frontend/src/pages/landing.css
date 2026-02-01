@@ -1,0 +1,124 @@
+:root {
+  --primary-red: #c62828;
+  --text-light: #ffffff;
+  --text-muted: #f3f3f3;
+}
+
+/* Remove scroll completely */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Full background */
+  .landing-bg {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+
+/* Red overlay */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(198, 40, 40, 0.78);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center content */
+.content {
+  text-align: center;
+  max-width: 520px;
+  min-width: 520px;   /* 👈 THIS IS THE KEY FIX */
+  color: var(--text-light);
+}
+
+.content h1 {
+  font-size: 64px;       /* ⬆ BIGGER */
+  font-weight: 800;      /* ⬆ stronger */
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 19px;
+  margin-bottom: 36px;
+  color:rgba(255, 255, 255, 0.582);
+  line-height: 1.4;
+}
+/* CTA */
+.cta {
+  background: white;
+  color: var(--primary-red);
+  border: none;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hint {
+  display: block;
+  margin-top: 14px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Side containers */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;             /* ⬆ more vertical breathing space */
+}
+
+.left {
+  margin-left: 40px;
+}
+
+.right {
+  margin-right: 40px;
+}
+
+/* Feature callouts (NOT buttons) */
+.feature-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: rgba(255, 255, 255, 0.14);
+  padding: 18px 26px;          /* ⬆ more padding */
+
+  border-radius: 10px;
+  border-left: 4px solid white;
+
+  font-size: 18px;             /* ⬆ bigger text */
+  font-weight: 700;            /* ⬆ stronger */
+
+  color: white;
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+
+  cursor: default;
+  pointer-events: none;
+}
+
+.feature-note .icon {
+  font-size: 20px;   /* ⬆ from 18px */
+  opacity: 0.95;
+}
+.overlay-inner {
+  width: 100%;
+  max-width: 1300px;     /* ⬆ slightly wider frame */
+  padding: 0 80px;       /* ⬆ more inner padding */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
